@@ -2,27 +2,42 @@
 // 讓使用者輸入客人的人數，並用「!」判斷人數，不為零顯示「照常播放電影」。
 
 
-function js01() {
-    const readline = require("readline");
+const readline = require("readline");
 
-    const rl = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout
-    });
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+function js01() {
 
     rl.question("請輸入人數：", inputValue => {
-        const regularExpression = /[^0-9]/;
-        const numberOfCustomer = regularExpression.test(inputValue);
-        if (numberOfCustomer) {
-            console.log('請輸入正確數字');
-            // return 要加，for recursive。
-            return js01();
-        } else if (inputValue != 0) {
-            console.log("照常播放電影");
-        } else {
-            console.log("不播放電影");
+
+        function testData() {
+
+            // const numberOfCustomer = ;
+            if (!isNumberOfCustomer(inputValue)) {
+                console.log("請重新輸入有效數字");
+                return js01();
+            }
         }
+
+        function getResult() {
+            if (!Number(inputValue)) {
+                console.log("不播放電影");
+            } else {
+                console.log("照常播放電影");
+            }
+        }
+        testData();
+        getResult();
+        rl.close();
     });
+
 }
-// rl.close();
 js01();
+
+function isNumberOfCustomer(inputValue) {
+    const regularExpression = /^[0-9]+$/;
+    return regularExpression.test(inputValue);
+}
