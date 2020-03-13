@@ -11,33 +11,27 @@ const rl = readline.createInterface({
 
 function js01() {
 
-    rl.question("請輸入人數：", inputValue => {
-
-        function testData() {
-
-            // const numberOfCustomer = ;
-            if (!isNumberOfCustomer(inputValue)) {
-                console.log("請重新輸入有效數字");
+    rl.question("請輸入人數：", inputNumber => {
+        function isPlayMovie() {
+            const positiveInteger = /^[0-9]+$/;
+            const isNumberOfCustomer = positiveInteger.test(inputNumber);
+            if (!isNumberOfCustomer) {
+                console.log('請輸入正確數字');
                 return js01();
             }
+            getResult();
+            rl.close();
         }
 
         function getResult() {
-            if (!Number(inputValue)) {
-                console.log("不播放電影");
-            } else {
+            if (inputNumber != 0) {
                 console.log("照常播放電影");
+            } else {
+                console.log("不播放電影");
             }
         }
-        testData();
-        getResult();
-        rl.close();
+        isPlayMovie();
     });
 
 }
 js01();
-
-function isNumberOfCustomer(inputValue) {
-    const regularExpression = /^[0-9]+$/;
-    return regularExpression.test(inputValue);
-}
