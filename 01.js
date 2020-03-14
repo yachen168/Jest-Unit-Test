@@ -24,7 +24,7 @@ function js01() {
         }
 
         function getResult() {
-            if (inputNumber != 0) {
+            if (+inputNumber) {
                 console.log("照常播放電影");
             } else {
                 console.log("不播放電影");
