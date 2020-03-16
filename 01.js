@@ -9,29 +9,21 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-function js01() {
+const isPlayMovie = require('./01-moudule');
 
-    rl.question("請輸入人數：", inputNumber => {
-        function isPlayMovie() {
+function js01() {
+    rl.question("請輸入看電影人數：", inputNumber => {
+        function getResult() {
             const positiveInteger = /^[0-9]+$/;
             const isNumberOfCustomer = positiveInteger.test(inputNumber);
             if (!isNumberOfCustomer) {
-                console.log('請輸入正確數字');
+                console.log('請輸入有效數字');
                 return js01();
             }
-            getResult();
+            isPlayMovie(inputNumber);
             rl.close();
         }
-
-        function getResult() {
-            if (+inputNumber) {
-                console.log("照常播放電影");
-            } else {
-                console.log("不播放電影");
-            }
-        }
-        isPlayMovie();
+        getResult(inputNumber);
     });
-
 }
 js01();
