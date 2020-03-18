@@ -9,13 +9,22 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+const getResult = require('./03.module');
 
-rl.question("請輸入年齡：", age => {
-    price = 400;
-    discount = 0.5;
-    if (age <= 6 || age >= 65) {
-        price = price * discount;
-    }
-    console.log("門票 $" + price + " 元");
-    rl.close();
-});
+function js03() {
+    rl.question("請輸入年齡：", inputAge => {
+        function analyzeAge() {
+            const positiveInteger = /^[\d]+$/;
+            const isPositiveInteger = positiveInteger.test(inputAge);
+            if (!isPositiveInteger) {
+                console.log(`請輸入有效年齡`);
+                return js03();
+            }
+            getResult(inputAge);
+            rl.close();
+        }
+        analyzeAge();
+    });
+}
+
+js03();
