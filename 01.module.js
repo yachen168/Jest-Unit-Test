@@ -1,12 +1,23 @@
-function getResult(inputNumber) {
-    if (Number(inputNumber)) {
-        console.log(`人數 ${inputNumber} 人，照常播放電影`);
+// 正則表達式
+function filtNumber(inputNumber) {
+    const positiveInteger = /^\d+$/;
+    const isNumberOfCustomer = positiveInteger.test(inputNumber);
+    if (!isNumberOfCustomer) {
         return true;
     } else {
-        console.log(`人數 ${inputNumber}，不播放電影`);
         return false;
     }
 }
 
 
-module.exports = getResult;
+// 判斷是否播放電影
+function getResult(inputNumber) {
+    if (+inputNumber) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+module.exports = { filtNumber, getResult };
