@@ -1,23 +1,12 @@
-// 正則表達式
-function filtNumber(inputNumber) {
+// 正則表達式，過濾出大於等於零的整數
+function isPositiveInteger(inputNumber) {
     const positiveInteger = /^\d+$/;
-    const isNumberOfCustomer = positiveInteger.test(inputNumber);
-    if (!isNumberOfCustomer) {
-        return true;
-    } else {
-        return false;
-    }
+    return positiveInteger.test(inputNumber);
 }
-
 
 // 判斷是否播放電影
-function getResult(inputNumber) {
-    if (+inputNumber) {
-        return true;
-    } else {
-        return false;
-    }
+function isPlayMovie(inputNumber) {
+    return +inputNumber;
 }
 
-
-module.exports = { filtNumber, getResult };
+module.exports = { isPositiveInteger, isPlayMovie };
