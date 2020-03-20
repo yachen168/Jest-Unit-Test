@@ -9,21 +9,21 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-const getResult = require('./03.module');
+const { isInteger, isOriginPrice } = require('./03.module');
 
 function js03() {
     rl.question("請輸入年齡：", inputAge => {
-        function analyzeAge() {
-            const positiveInteger = /^[\d]+$/;
-            const isPositiveInteger = positiveInteger.test(inputAge);
-            if (!isPositiveInteger) {
-                console.log(`請輸入有效年齡`);
-                return js03();
+        if (!isInteger(inputAge)) {
+            console.log(`請輸入有效年齡`);
+            return js03();
+        } else {
+            if (isOriginPrice(inputAge)) {
+                console.log(`一般票價：400 元`);
+            } else {
+                console.log(`優待票價：200 元`);
             }
-            getResult(inputAge);
-            rl.close();
         }
-        analyzeAge();
+        rl.close();
     });
 }
 
