@@ -1,6 +1,4 @@
-// 4. 輸入 n 印出 1+2-3+4-5+6...n 的算式與總和
-
-
+// 4. 輸入 n，印出 1+2-3+4-5+6...n 的算式與總和
 const readline = require("readline");
 
 const rl = readline.createInterface({
@@ -10,6 +8,7 @@ const rl = readline.createInterface({
 
 const { isPositiveInteger, getResult } = require('./04.module')
 
+// 印出結果
 function js04() {
     rl.question("請輸入一個大於 0 的整數：", inputNumber => {
         if (!isPositiveInteger(inputNumber)) {
