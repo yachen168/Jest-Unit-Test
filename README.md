@@ -3,4 +3,4 @@
 ## 使用技術
 - Vanilla JS
 - Jest
-- node.js
+- Node.js
