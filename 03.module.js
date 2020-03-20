@@ -1,8 +1,7 @@
-// 判斷是否為大於等於 0 的整數
-function isInteger(inputAge) {
+// 是否為大於等於 0 的整數
+function isPositiveInteger(inputAge) {
     const positiveInteger = /^\d+$/;
-    const isPositiveInteger = positiveInteger.test(inputAge);
-    return isPositiveInteger;
+    return positiveInteger.test(inputAge);
 }
 
 // 判斷年齡
@@ -11,4 +10,4 @@ function isOriginPrice(inputAge) {
 }
 
 
-module.exports = { isInteger, isOriginPrice };
+module.exports = { isPositiveInteger, isOriginPrice };

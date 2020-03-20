@@ -1,4 +1,4 @@
-// 判斷整數
+// 是否為整數
 function isIntegers(inputNumber1, inputNumber2) {
     const integer = /^-?\d+$/;
     const isInteger1 = integer.test(inputNumber1);
@@ -6,7 +6,7 @@ function isIntegers(inputNumber1, inputNumber2) {
     return (isInteger1 && isInteger2);
 }
 
-// 判斷餘數
+// 餘數是否相同
 function isEqual(inputNumber1, inputNumber2) {
     const remainder1 = +inputNumber1 % 3;
     const remainder2 = +inputNumber2 % 3;
