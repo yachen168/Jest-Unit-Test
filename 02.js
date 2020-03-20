@@ -8,16 +8,16 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-const { filtNumber, getResult } = require('./02.module');
+const { isIntegers, isEqual } = require('./02.module');
 
 function js02() {
     rl.question("請輸入第一個整數：", inputNumber1 => {
         rl.question("請輸入第二個整數：", inputNumber2 => {
-            if (!filtNumber(inputNumber1, inputNumber2)) {
+            if (!isIntegers(inputNumber1, inputNumber2)) {
                 console.log(`請重新輸入2個有效整數`);
                 return js02();
             } else {
-                if (getResult(inputNumber1, inputNumber2)) {
+                if (isEqual(inputNumber1, inputNumber2)) {
                     console.log(`餘數相同`);
                 } else {
                     console.log(`餘數不同`);
