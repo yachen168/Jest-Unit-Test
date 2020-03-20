@@ -1,4 +1,4 @@
-// 過濾出大於等於零的整數
+// 是否為大於等於零的整數
 function isPositiveInteger(inputNumber) {
     const positiveInteger = /^\d+$/;
     return positiveInteger.test(inputNumber);
@@ -6,7 +6,7 @@ function isPositiveInteger(inputNumber) {
 
 // 是否播放電影
 function isPlayMovie(inputNumber) {
-    return +inputNumber;
+    return inputNumber;
 }
 
 module.exports = { isPositiveInteger, isPlayMovie };
