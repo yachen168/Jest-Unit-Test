@@ -8,14 +8,12 @@ function getResult(inputNumber) {
     let equation = "1";
     let sum = 1;
     for (let i = 2; i <= +inputNumber; i++) {
-        const negativeNumber = -i;
-        const positiveNumber = +i;
         if (i % 2) {
-            equation = equation + "-" + i;
-            sum = sum + negativeNumber;
+            equation += `-${i}`;
+            sum += -i;
         } else {
-            equation = equation + "+" + i;
-            sum = sum + positiveNumber;
+            equation += `+${i}`;
+            sum += i;
         }
     }
     return { equation, sum };
