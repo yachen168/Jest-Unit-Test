@@ -1,4 +1,4 @@
-const { isIntegers, isEqual } = require('../02.module');
+const { isIntegers, isRemainderEqual } = require('../02.module');
 // 測試採 3A 原則。
 // 因在終端機輸入的值都是 string，所以皆以 string 做測試。
 describe('JS02', () => {
@@ -38,14 +38,14 @@ describe('JS02', () => {
         it('餘數相同：例如第一個數為 6，第二個數為 9，除以 3 的餘數皆為 0', () => {
             const number1 = "6";
             const number2 = "9";
-            const result = isEqual(number1, number2);
-            expect(result).toBeTruthy();
+            const result = isRemainderEqual(number1, number2);
+            expect(result).toMatch(`餘數相同`);
         })
         it('餘數不同：例如第一個數為 8，第二個數為 4，除以 3 的餘數分別為 2 與 1', () => {
             const number1 = "8";
             const number2 = "4";
-            const result = isEqual(number1, number2);
-            expect(result).toBeFalsy();
+            const result = isRemainderEqual(number1, number2);
+            expect(result).toMatch(`餘數不同`);
         })
     })
 });

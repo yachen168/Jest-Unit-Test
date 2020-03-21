@@ -8,7 +8,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-const { isIntegers, isEqual } = require('./02.module');
+const { isIntegers, isRemainderEqual } = require('./02.module');
 
 function js02() {
     rl.question("請輸入第一個整數：", inputNumber1 => {
@@ -17,11 +17,7 @@ function js02() {
                 console.log(`請重新輸入2個有效整數`);
                 return js02();
             } else {
-                if (isEqual(inputNumber1, inputNumber2)) {
-                    console.log(`餘數相同`);
-                } else {
-                    console.log(`餘數不同`);
-                }
+                console.log(isRemainderEqual(inputNumber1, inputNumber2))
             }
             rl.close();
         });

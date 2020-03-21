@@ -5,8 +5,8 @@ function isIntegers(inputNumber1, inputNumber2) {
 }
 
 // 餘數是否相同
-function isEqual(inputNumber1, inputNumber2) {
-    return (+inputNumber1 % 3 === +inputNumber2 % 3);
+function isRemainderEqual(inputNumber1, inputNumber2) {
+    return (+inputNumber1 % 3 === +inputNumber2 % 3) ? '餘數相同' : '餘數不同';
 }
 
-module.exports = { isIntegers, isEqual };
+module.exports = { isIntegers, isRemainderEqual };
