@@ -38,12 +38,12 @@ describe('JS03', () => {
         it('一般票 400 元：6 歲 < 顧客年齡 < 65 歲', () => {
             const ageOfCostumer = "60";
             const result = isOriginPrice(ageOfCostumer);
-            expect(result).toBeTruthy();
+            expect(result).toMatch(`400 元`);
         })
         it('優待票 200 元：顧客年齡 ≦ 6 歲或 ≧ 65 歲', () => {
             const ageOfCostumer = "70";
             const result = isOriginPrice(ageOfCostumer);
-            expect(result).toBeFalsy();
+            expect(result).toMatch(`200 元`);
         })
     })
 });

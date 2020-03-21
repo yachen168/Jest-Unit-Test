@@ -15,11 +15,7 @@ function js03() {
             console.log(`請輸入有效年齡`);
             return js03();
         } else {
-            if (isOriginPrice(inputAge)) {
-                console.log(`一般票價：400 元`);
-            } else {
-                console.log(`優待票價：200 元`);
-            }
+            console.log(isOriginPrice(inputAge));
         }
         rl.close();
     });
