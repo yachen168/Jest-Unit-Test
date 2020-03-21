@@ -9,5 +9,4 @@ function isOriginPrice(inputAge) {
     return (+inputAge > 6 && +inputAge < 65) ? '400 元' : '200 元';
 }
 
-
 module.exports = { isPositiveInteger, isOriginPrice };

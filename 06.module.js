@@ -25,6 +25,4 @@ function getOddAlphabet(names) {
     return oddAlphabet;
 }
 
-
-
 module.exports = { isEnglishNames, getOddAlphabet };

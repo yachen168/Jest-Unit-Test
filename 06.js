@@ -1,11 +1,5 @@
 // 6. 宣告陣列 name，讓使用者自行輸入四個英文名字於陣列中，輸出第一個和第三個名字的單數個字母。
-const readline = require("readline");
-
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
+const rl = require('./readline.module');
 const { isEnglishNames, getOddAlphabet } = require('./06.module');
 
 function js06() {

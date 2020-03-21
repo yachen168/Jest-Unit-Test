@@ -1,13 +1,5 @@
 // 2. 使用者輸入兩個整數，將它們分別除以 3 ，判斷餘數是否相同，若相同，則於螢幕上顯示「餘數相同」。
-
-
-const readline = require("readline");
-
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
+const rl = require('./readline.module');
 const { isIntegers, isRemainderEqual } = require('./02.module');
 
 function js02() {

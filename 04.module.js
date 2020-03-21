@@ -20,5 +20,4 @@ function getResult(inputNumber) {
     return { equation, sum };
 }
 
-
 module.exports = { isPositiveInteger, getResult };
