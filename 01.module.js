@@ -6,7 +6,7 @@ function isPositiveInteger(inputNumber) {
 
 // 是否播放電影
 function isPlayMovie(inputNumber) {
-    return !!+inputNumber;
+    return (!!+inputNumber) ? '照常播放電影' : '不播放電影';
 }
 
 module.exports = { isPositiveInteger, isPlayMovie };
