@@ -15,7 +15,7 @@ function js01() {
             console.log(`請重新輸入有效數字`);
             return js01();
         } else {
-            if (+isPlayMovie(inputNumber)) {
+            if (isPlayMovie(inputNumber)) {
                 console.log(`人數 ${inputNumber} 人，照常播放電影`);
             } else {
                 console.log(`人數 ${inputNumber} 人，不播放電影`);
