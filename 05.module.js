@@ -10,7 +10,7 @@ function getRecursive(n) {
     if (n > 4) {
         return getRecursive(n - 2) + (n - 2) * n;
     }
-    return (n - 2) * n;
+    return 2 * 4;
 }
 
 module.exports = { isEvenInt_AtLeastFour, getRecursive };
