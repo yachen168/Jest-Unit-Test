@@ -1,7 +1,7 @@
 const { isEvenInt_AtLeastFour, getRecursive } = require('../05.module')
     // 測試採 3A 原則。
     // 因在終端機輸入的值都是 string，所以皆以 string 做測試。
-describe('JS01', () => {
+describe('JS05', () => {
     describe('使用者是否輸入正整數', () => {
         it('若輸入任何符號，則要求重新輸入，例如：(´・3・`)', () => {
             const case1 = "(´・3・`)";
@@ -46,14 +46,19 @@ describe('JS01', () => {
     })
     describe('輸入正確格式數字，則顯示計算結果', () => {
         it('若輸入 4，則顯示結果為 8。(計算過程為 2*4)', () => {
-            const numberOfCustomer = "4";
-            const result = getRecursive(numberOfCustomer);
+            const case1 = "4";
+            const result = getRecursive(case1);
             expect(result).toBe(8);
         })
         it('若輸入 10，則顯示結果為 160。(計算過程為 2*4+4*6+6*8+8*10)', () => {
-            const numberOfCustomer = "10";
-            const result = getRecursive(numberOfCustomer);
+            const case2 = "10";
+            const result = getRecursive(case2);
             expect(result).toBe(160);
+        })
+        it('若輸入 16，則顯示結果為 672。(計算過程為 2*4+4*6+...+14*16)', () => {
+            const case3 = "16";
+            const result = getRecursive(case3);
+            expect(result).toBe(672);
         })
     });
 });
