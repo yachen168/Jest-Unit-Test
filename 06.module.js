@@ -1,14 +1,12 @@
 // 是否皆為英文字
 function isEnglishNames(names) {
     const EnglishName = /^[A-z]+$/;
-    let isVaild = true;
     for (let name of names) {
         if (!EnglishName.test(name)) {
-            isVaild = false;
-            break;
+            return false;
         }
     }
-    return isVaild;
+    return true;
 }
 
 // 取得奇數字母
