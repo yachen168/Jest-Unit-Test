@@ -11,9 +11,7 @@ function divi(inputNumber, timesOfDivide) {
     if (inputNumber % 3 !== 0 && !isFoundNumber.test(resultOfDivide)) {
         return divi(resultOfDivide, timesOfDivide);
     }
-    return `需除以 ${timesOfDivide} 次`;
+    return `需除以 ${timesOfDivide} 次，為 ${resultOfDivide}`;
 }
-
-//
 
 module.exports = { isPositiveInteger, divi };
