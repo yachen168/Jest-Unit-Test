@@ -1,27 +1,31 @@
 const { isEnglishNames, getOddAlphabet } = require('../06.module');
 // 測試採 3A 原則。
-// 因在終端機輸入的值都是 string，所以皆以 string 做測試。
 describe('JS06', () => {
     describe('使用者輸入格式是否正確', () => {
-        it('若輸入含任何符號，要求重新輸入，例如：(´・ω・`)', () => {
-            const case1 = "(´・ω・`)";
-            const result = isEnglishNames(case1);
+        it('若輸入任何符號，要求重新輸入，例如：・ω・、Yachen、Roy、Cindy', () => {
+            const names = ['・ω・', 'Yachen', 'Roy', 'Cindy'];
+            const result = isEnglishNames(names);
             expect(result).toBeFalsy();
         })
-        it('若輸入含任何數字，要求重新輸入，例如：7pupu', () => {
-            const case2 = "7pupu";
-            const result = isEnglishNames(case2);
+        it('若輸入任何數字，要求重新輸入，例如：7pupu、Yachen、Roy、Cindy', () => {
+            const names = ['7pupu', 'Yachen', 'Roy', 'Cindy'];
+            const result = isEnglishNames(names);
             expect(result).toBeFalsy();
         })
-        it('若輸入含任何中文，要求重新輸入，例如：小明', () => {
-            const case3 = "小明";
-            const result = isEnglishNames(case3);
+        it('若輸入任何中文，要求重新輸入，例如：小明、Yachen、Roy、Cindy', () => {
+            const names = ['小明', 'Yachen', 'Roy', 'Cindy'];
+            const result = isEnglishNames(names);
             expect(result).toBeFalsy();
         })
         it('若輸入空值，要求重新輸入', () => {
-            const case4 = " ";
-            const result = isEnglishNames(case4);
+            const names = ['', 'Yachen', 'Roy', 'Cindy'];
+            const result = isEnglishNames(names);
             expect(result).toBeFalsy();
+        })
+        it('若輸入格式正確，則開始運作', () => {
+            const names = ['Bob', 'Yachen', 'Roy', 'Cindy'];
+            const result = isEnglishNames(names);
+            expect(result).toBeTruthy();
         })
     });
     describe('顯示第一與三個英文名字中的奇數字母', () => {
