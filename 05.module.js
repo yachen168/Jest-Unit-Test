@@ -1,6 +1,6 @@
 // 是否為大於等於 4 的偶數
 function isEven_AtLeastFour(n) {
-    const Integer_AtLeastFour = /^[468][02468]*$|^[1-9][02468]+$/;
+    const Integer_AtLeastFour = /^[468]$|^[1-9][02468]+$/;
     return Integer_AtLeastFour.test(n);
 }
 
