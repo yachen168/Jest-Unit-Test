@@ -4,9 +4,11 @@ function isEvenInt_AtLeastFour(n) {
     return evenInt_AtLeastFour.test(n);
 }
 
-// 遞迴
-function getRecursive(n) {
-    return (n > 4) ? getRecursive(n - 2) + (n - 2) * n : 2 * 4;
+function getCalculatedResult(n) {
+    if (n > 4) {
+        return getCalculatedResult(n - 2) + (n - 2) * n;
+    }
+    return 2 * 4;
 }
 
-module.exports = { isEvenInt_AtLeastFour, getRecursive };
+module.exports = { isEvenInt_AtLeastFour, getCalculatedResult };
