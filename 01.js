@@ -8,9 +8,8 @@ function js01() {
         if (!isPositiveInteger(inputNumber)) {
             console.log(`請重新輸入有效數字`);
             return js01();
-        } else {
-            console.log(isPlayMovie(inputNumber));
         }
+        console.log(isPlayMovie(inputNumber));
         rl.close();
     });
 }

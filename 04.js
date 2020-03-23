@@ -2,16 +2,14 @@
 const rl = require('./readline.module');
 const { isPositiveInteger, getResult } = require('./04.module')
 
-// 印出結果
 function js04() {
     rl.question("請輸入一個大於 0 的整數：", inputNumber => {
         if (!isPositiveInteger(inputNumber)) {
             console.log(`請重新輸入一個大於 0 的整數`);
             return js04();
-        } else {
-            const result = getResult(inputNumber);
-            console.log(`總合：${result.equation} = ${result.sum}`)
         }
+        const result = getResult(inputNumber);
+        console.log(`總合：${result.equation} = ${result.sum}`)
         rl.close();
     });
 }

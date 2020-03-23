@@ -11,10 +11,9 @@ function js06() {
                     if (!isEnglishNames(names)) {
                         console.log(`請重新輸入四個正確的英文名字`);
                         return js06();
-                    } else {
-                        console.log(getOddAlphabet(names));
-                        rl.close();
                     }
+                    console.log(getOddAlphabet(names));
+                    rl.close();
                 });
             });
         });

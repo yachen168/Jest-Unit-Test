@@ -8,9 +8,8 @@ function js03() {
         if (!isPositiveInteger(inputAge)) {
             console.log(`請輸入有效年齡`);
             return js03();
-        } else {
-            console.log(isOriginPrice(inputAge));
         }
+        console.log(isOriginPrice(inputAge));
         rl.close();
     });
 }

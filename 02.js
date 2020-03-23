@@ -8,9 +8,8 @@ function js02() {
             if (!isIntegers(inputNumber1, inputNumber2)) {
                 console.log(`請重新輸入2個有效整數`);
                 return js02();
-            } else {
-                console.log(isRemainderEqual(inputNumber1, inputNumber2));
             }
+            console.log(isRemainderEqual(inputNumber1, inputNumber2));
             rl.close();
         });
     });
