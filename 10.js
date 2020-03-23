@@ -4,9 +4,5 @@
 const rl = require('./readline.module');
 const getResult = require('./10.module');
 
-function js10() {
-    console.log(getResult());
-    rl.close();
-}
-
-js10();
+console.log(getResult());
+rl.close();

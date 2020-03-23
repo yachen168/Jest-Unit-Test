@@ -4,9 +4,5 @@
 const rl = require('./readline.module');
 const getResultOfMerge = require('./09.module');
 
-function js09() {
-    console.log(getResultOfMerge());
-    rl.close();
-}
-
-js09();
+console.log(getResultOfMerge());
+rl.close();
