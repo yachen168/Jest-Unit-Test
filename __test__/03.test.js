@@ -1,4 +1,4 @@
-const { isPositiveInteger, isOriginPrice } = require('../03.module');
+const { isPositiveInteger, isHalfPrice } = require('../03.module');
 // 測試採 3A 原則。
 // 因在終端機輸入的值都是 string，所以皆以 string 做測試。
 describe('JS03', () => {
@@ -34,15 +34,15 @@ describe('JS03', () => {
             expect(result).toBeTruthy();
         })
     });
-    describe('根據顧客年齡顯示票價', () => {
-        it('一般票 400 元：6 歲 < 顧客年齡 < 65 歲', () => {
+    describe('一般價 400 元，優待票 200 元(顧客年齡 ≦ 6 歲或 ≧ 65 歲)', () => {
+        it('輸入 60 歲，顯示票價 400 元', () => {
             const ageOfCostumer = "60";
-            const result = isOriginPrice(ageOfCostumer);
+            const result = isHalfPrice(ageOfCostumer);
             expect(result).toMatch(`400 元`);
         })
-        it('優待票 200 元：顧客年齡 ≦ 6 歲或 ≧ 65 歲', () => {
-            const ageOfCostumer = "70";
-            const result = isOriginPrice(ageOfCostumer);
+        it('輸入 3 歲，顯示票價 200 元', () => {
+            const ageOfCostumer = "3";
+            const result = isHalfPrice(ageOfCostumer);
             expect(result).toMatch(`200 元`);
         })
     })
