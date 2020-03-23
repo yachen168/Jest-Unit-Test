@@ -17,7 +17,7 @@ function getResult(inputNumber) {
             sum += i;
         }
     }
-    return { equation, sum };
+    return `總合：${equation} = ${sum}`;
 }
 
 module.exports = { isPositiveInteger, getResult };

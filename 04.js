@@ -8,8 +8,7 @@ function js04() {
             console.log(`請重新輸入一個大於 0 的整數`);
             return js04();
         }
-        const result = getResult(inputNumber);
-        console.log(`總合：${result.equation} = ${result.sum}`)
+        console.log(getResult(inputNumber))
         rl.close();
     });
 }

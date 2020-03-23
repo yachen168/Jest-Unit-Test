@@ -43,17 +43,17 @@ describe('JS04', () => {
         it('若 n = 8，顯示 1+2-3+4-5+6-7+8 = 6', () => {
             const n = "8";
             const result = getResult(n);
-            expect(result).toEqual({ equation: `1+2-3+4-5+6-7+8`, sum: 6 });
+            expect(result).toMatch(`1+2-3+4-5+6-7+8 = 6`);
         })
         it('若 n = 5，顯示 1+2-3+4-5 = -1', () => {
             const n = "5";
             const result = getResult(n);
-            expect(result).toEqual({ equation: `1+2-3+4-5`, sum: -1 });
+            expect(result).toMatch(`1+2-3+4-5 = -1`);
         })
         it('若 n = 1，顯示 1 = 1', () => {
             const n = "1";
             const result = getResult(n);
-            expect(result).toEqual({ equation: `1`, sum: 1 });
+            expect(result).toMatch(`1 = 1`);
         })
     })
 });
