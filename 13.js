@@ -3,7 +3,7 @@
 // 再繼續跑並且贏得比賽?
 
 const rl = require('./readline.module');
-const getResult = require('./13.module')
+const getRestTime = require('./13.module')
 
-console.log(getResult());
+console.log(getRestTime());
 rl.close();
