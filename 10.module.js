@@ -6,7 +6,7 @@ function getResult() {
             return `質數：${value} (索引值為 ${index})`;
         }
     })
-    return arrangeArray(indexOfPrimeNumber);
+    return arrayToString(indexOfPrimeNumber);
 }
 
 // 判斷一個數是否為質數
@@ -16,9 +16,14 @@ function isPrimeNumber(value) {
     }
 }
 
-// 整理陣列
-function arrangeArray(indexOfPrimeNumber) {
-    return indexOfPrimeNumber.filter(value => value).join(' , ');
+// 整裡陣列(過濾 undefined)
+function removeUndefined(indexOfPrimeNumber) {
+    return indexOfPrimeNumber.filter(value => value);
+}
+
+// 陣列轉字串
+function arrayToString(indexOfPrimeNumber) {
+    return removeUndefined(indexOfPrimeNumber).join(' , ');
 }
 
 module.exports = getResult;
