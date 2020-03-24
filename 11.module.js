@@ -7,16 +7,16 @@ function isPositiveInteger(inputNumber) {
 // 取得價錢
 function getPrice(inputNumber) {
     const eachPrice = 500;
-    const firstPeriodDiscount = 500 * (1 - 0.79);
-    let total = inputNumber * eachPrice - firstPeriodDiscount;
+    const firstPeriodPrice = 500 * 0.79;
+    let totalPrice = firstPeriodPrice + (inputNumber - 1) * eachPrice;
     let isFivePeriodDiscount = (inputNumber - 5) > 0;
     if (isFivePeriodDiscount) {
         do {
-            total = total - 200;
+            totalPrice -= 200;
             isFivePeriodDiscount -= 1;
         } while (isFivePeriodDiscount === 0);
     }
-    return `${inputNumber} 期的價錢為 ${total} 元`;
+    return `${inputNumber} 期的價錢為 ${totalPrice} 元`;
 }
 
 module.exports = { isPositiveInteger, getPrice };
