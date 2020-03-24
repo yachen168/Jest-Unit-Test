@@ -15,7 +15,7 @@ function getPrice(inputNumber) {
             totalPrice -= 200;
         } while (inputNumber > 5);
     }
-    return `價錢為 ${totalPrice} 元`;
+    return `價錢為 $${totalPrice} 元`;
 }
 
 module.exports = { isPositiveInteger, getPrice };
