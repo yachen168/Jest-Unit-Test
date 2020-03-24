@@ -2,7 +2,7 @@
 // 印出陣列中所包含的質數以及其索引值。
 
 const rl = require('./readline.module');
-const getResult = require('./10.module');
+const { getResult, isPrimeNumber } = require('./10.module');
 
 console.log(getResult());
 rl.close();

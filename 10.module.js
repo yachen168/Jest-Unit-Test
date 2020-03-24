@@ -26,4 +26,4 @@ function arrayToString(indexOfPrimeNumber) {
     return removeUndefined(indexOfPrimeNumber).join(' , ');
 }
 
-module.exports = getResult;
+module.exports = { getResult, isPrimeNumber };
