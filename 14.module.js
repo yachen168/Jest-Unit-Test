@@ -10,7 +10,7 @@ function getNumberOfBacterial(originNumberOfBacterial, inputNumber) {
     const oneMinuteIncrement = Math.pow(2, 1 / 20);
     let NumberOfBacterial = originNumberOfBacterial;
     if (+inputNumber > 0) {
-        NumberOfBacterial = originNumberOfBacterial * oneMinuteIncrement
+        NumberOfBacterial = NumberOfBacterial * oneMinuteIncrement
         return getNumberOfBacterial(NumberOfBacterial, --inputNumber);
     }
     return `細菌有 ${NumberOfBacterial.toFixed(2)}b 隻`;
