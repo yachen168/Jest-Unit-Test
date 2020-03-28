@@ -5,8 +5,8 @@
 const rl = require('./readline.module');
 const getRandomSport = require('./15.module');
 
-let sportNumber = [0, 0, 0];
-let total = 0;
+let sportQuantity = [0, 0, 0];
+let totalWeight = 0;
 
-console.log(getRandomSport(sportNumber, total));
+console.log(getRandomSport(sportQuantity, totalWeight));
 rl.close();
