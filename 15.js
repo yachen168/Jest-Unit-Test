@@ -3,10 +3,10 @@
 決定每次要搬到車上的器材為何，當超過限重時即停止搬運，並列印出三種器材的個數及總重量。
 */
 const rl = require('./readline.module');
-const getRandomSport = require('./15.module');
+const getResult = require('./15.module');
 
 let sportQuantity = [0, 0, 0];
 let totalWeight = 0;
 
-console.log(getRandomSport(sportQuantity, totalWeight));
+console.log(getResult(sportQuantity, totalWeight));
 rl.close();
