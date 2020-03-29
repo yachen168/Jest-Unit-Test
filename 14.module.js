@@ -1,6 +1,6 @@
 // 是否為正整數
 function isPositiveInteger(inputNumber) {
-    const positiveInteger = /^[0-9]\d*$/;
+    const positiveInteger = /^\d+$/;
     return positiveInteger.test(inputNumber);
 }
 
