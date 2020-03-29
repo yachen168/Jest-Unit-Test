@@ -9,11 +9,11 @@ function printStars() {
         '   ***',
         '    *'
     ];
-    for (let star of stars) {
+    stars.forEach(value => {
         result += `
-        ${star}
-        `
-    }
+      ${value}
+    `
+    })
     return `正常版：${result}`;
 }
 
@@ -29,12 +29,12 @@ function printRotateStarts() {
         '      * * * *',
         '        * *'
     ];
-    for (let star of stars) {
+    stars.forEach(value => {
         result += `
-      ${star}
-      `
-    }
-    return `順直針旋轉 90 度：${result}`;
+      ${value}
+  `
+    })
+    return `順時針旋轉 90 度：${result}`;
 }
 
 module.exports = { printStars, printRotateStarts };
