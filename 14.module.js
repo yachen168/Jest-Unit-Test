@@ -1,4 +1,4 @@
-// 是否為正整數
+// 是否為 ≧ 0 的整數
 function isPositiveInteger(inputNumber) {
     const positiveInteger = /^\d+$/;
     return positiveInteger.test(inputNumber);

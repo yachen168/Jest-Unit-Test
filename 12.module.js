@@ -1,4 +1,4 @@
-// 印出一陣列 1~20
+// 印出一陣列 10~20
 function printArray_tenToTwenty() {
     let array_tenToTwenty = []
     for (let i = 10; i < 21; i++) {

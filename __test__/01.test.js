@@ -34,13 +34,13 @@ describe('JS01', () => {
             expect(result).toBeTruthy();
         })
     })
-    describe('是否要播放電影', () => {
-        it('若輸入人數大於 0 人，則顯示播放電影', () => {
-            const numberOfCustomer = "1";
+    describe('若輸入人數大於 0 人，則播放電影', () => {
+        it('若輸入人數 10 人，顯示播放電影，', () => {
+            const numberOfCustomer = "10";
             const result = isPlayMovie(numberOfCustomer);
-            expect(result).toMatch(`照常播放電影`);
+            expect(result).toMatch('播放電影');
         })
-        it('若輸入人數等於 0 人，則顯示不播放電影', () => {
+        it('若輸入人數 0 人，顯示不播放電影', () => {
             const numberOfCustomer = "0";
             const result = isPlayMovie(numberOfCustomer);
             expect(result).toMatch(`不播放電影`);
