@@ -12,16 +12,16 @@ function getResult() {
     const gradeOfCandidate3 = table.map((value) => 4 - value.indexOf('candidate3'));
     const gradeOfCandidate4 = table.map((value) => 4 - value.indexOf('candidate4'));
     // 候選人的各種票數*各種票數所得分數
-    const result1 = votes.map((value, index) => value * gradeOfCandidate1[index]);
-    const result2 = votes.map((value, index) => value * gradeOfCandidate2[index]);
-    const result3 = votes.map((value, index) => value * gradeOfCandidate3[index]);
-    const result4 = votes.map((value, index) => value * gradeOfCandidate4[index]);
-    // 將結果相加
-    const accumulator1 = result1.reduce((accumulator, currentValue) => accumulator + currentValue);
-    const accumulator2 = result2.reduce((accumulator, currentValue) => accumulator + currentValue);
-    const accumulator3 = result3.reduce((accumulator, currentValue) => accumulator + currentValue);
-    const accumulator4 = result4.reduce((accumulator, currentValue) => accumulator + currentValue);
-    return `一號選手：${accumulator1}，二號選手：${accumulator2}，三號選手：${accumulator3}，四號選手：${accumulator4}`;
+    const voteMultiplyGrade1 = votes.map((value, index) => value * gradeOfCandidate1[index]);
+    const voteMultiplyGrade2 = votes.map((value, index) => value * gradeOfCandidate2[index]);
+    const voteMultiplyGrade3 = votes.map((value, index) => value * gradeOfCandidate3[index]);
+    const voteMultiplyGrade4 = votes.map((value, index) => value * gradeOfCandidate4[index]);
+    // 累加
+    const result1 = voteMultiplyGrade1.reduce((accumulator, currentValue) => accumulator + currentValue);
+    const result2 = voteMultiplyGrade2.reduce((accumulator, currentValue) => accumulator + currentValue);
+    const result3 = voteMultiplyGrade3.reduce((accumulator, currentValue) => accumulator + currentValue);
+    const result4 = voteMultiplyGrade4.reduce((accumulator, currentValue) => accumulator + currentValue);
+    return `一號選手：${result1}，二號選手：${result2}，三號選手：${result3}，四號選手：${result4}`;
 }
 
 module.exports = getResult;
