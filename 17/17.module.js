@@ -27,7 +27,7 @@ function getResult() {
     const accumulator2 = result2.reduce((accumulator, currentValue) => accumulator + currentValue);
     const accumulator3 = result3.reduce((accumulator, currentValue) => accumulator + currentValue);
     const accumulator4 = result4.reduce((accumulator, currentValue) => accumulator + currentValue);
-    return `一號選手：${accumulator1}，二號選手：${accumulator2}，三號選手${accumulator3}，三號選手${accumulator4}`;
+    return `一號選手：${accumulator1}，二號選手：${accumulator2}，三號選手：${accumulator3}，四號選手：${accumulator4}`;
 }
 
 module.exports = getResult;
