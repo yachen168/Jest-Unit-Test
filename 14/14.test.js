@@ -4,66 +4,72 @@ const { isPositiveInteger, getNumberOfBacterial } = require('./14.module')
 describe('JS11', () => {
     describe('使用者是否輸入 ≧ 0 的整數', () => {
         it('若輸入任何符號，則要求重新輸入，例如：(´・3・`)', () => {
-            const case1 = "(´・3・`)";
-            const result = isPositiveInteger(case1);
+            const numberOfBacterial = "(´・3・`)";
+            const numberOfTime = "14"
+            const result = isPositiveInteger(numberOfBacterial, numberOfTime);
             expect(result).toBeFalsy();
         })
         it('若輸入任何英文，則要求重新輸入，例如：7pupu', () => {
-            const case2 = "7pupu";
-            const result = isPositiveInteger(case2);
+            const numberOfBacterial = "7pupu";
+            const numberOfTime = "14"
+            const result = isPositiveInteger(numberOfBacterial, numberOfTime);
             expect(result).toBeFalsy();
         })
-        it('若輸入負數，則要求重新輸入，例如：-10', () => {
-            const case3 = "-10";
-            const result = isPositiveInteger(case3);
+        it('若輸入任何負數，則要求重新輸入，例如：-10', () => {
+            const numberOfBacterial = "-10";
+            const numberOfTime = "14"
+            const result = isPositiveInteger(numberOfBacterial, numberOfTime);
             expect(result).toBeFalsy();
         })
-        it('若輸入小數，則要求重新輸入，例如：1.68', () => {
-            const case4 = "1.68";
-            const result = isPositiveInteger(case4);
+        it('若輸入任何小數，則要求重新輸入，例如：1.68', () => {
+            const numberOfBacterial = "1.68";
+            const numberOfTime = "14"
+            const result = isPositiveInteger(numberOfBacterial, numberOfTime);
             expect(result).toBeFalsy();
         })
-        it('若輸入空值，要求重新輸入', () => {
-            const case5 = "";
-            const result = isPositiveInteger(case5);
+        it('若輸入任何空值，要求重新輸入', () => {
+            const numberOfBacterial = "";
+            const numberOfTime = "14"
+            const result = isPositiveInteger(numberOfBacterial, numberOfTime);
             expect(result).toBeFalsy();
         })
         it('若輸入有效數字，將字串轉為數字，例如：18', () => {
-            const case6 = "18";
-            const result = isPositiveInteger(case6);
+            const numberOfBacterial = "18";
+            const numberOfTime = "14"
+            const result = isPositiveInteger(numberOfBacterial, numberOfTime);
             expect(result).toBeTruthy();
         })
     })
     describe('輸入格式正確得分鐘數，顯示結果', () => {
-        it('若輸入 0，則顯示細菌有 1.00b 隻', () => {
-            const originNumber = 1;
-            const case1 = 0;
-            const result = getNumberOfBacterial(originNumber, case1);
-            expect(result).toMatch(`細菌有 1.00b 隻`);
+        it('若輸入 0，則顯示細菌有 1.00', () => {
+            const numberOfBacterial = 1;
+            const numberOfTime = 0;
+            const result = getNumberOfBacterial(numberOfBacterial, numberOfTime);
+            expect(result).toMatch(`細菌有 1.00`);
         })
-        it('若輸入 1，則顯示細菌有 1.04b 隻', () => {
-            const originNumber = 1;
-            const case2 = "1";
-            const result = getNumberOfBacterial(originNumber, case2);
-            expect(result).toMatch(`細菌有 1.04b 隻`);
+        it('若輸入 1，則顯示細菌有 1.04', () => {
+            const numberOfBacterial = 1;
+            const numberOfTime = "1";
+            const result = getNumberOfBacterial(numberOfBacterial, numberOfTime);
+            expect(result).toMatch(`細菌有 1.04`);
         })
-        it('若輸入 20，則顯示細菌有 2.00b 隻', () => {
-            const originNumber = 1;
-            const case3 = "20";
-            const result = getNumberOfBacterial(originNumber, case3);
-            expect(result).toMatch(`細菌有 2.00b 隻`);
+        it('若輸入 20，則顯示細菌有 2.00', () => {
+            const numberOfBacterial = 1;
+            const numberOfTime = "20";
+            const result = getNumberOfBacterial(numberOfBacterial, numberOfTime);
+            expect(result).toMatch(`細菌有 2.00`);
         })
-        it('若輸入 40，則顯示細菌有 4.00b 隻', () => {
-            const originNumber = 1;
-            const case4 = "40";
-            const result = getNumberOfBacterial(originNumber, case4);
-            expect(result).toMatch(`細菌有 4.00b 隻`);
+        it('若輸入 40，則顯示細菌有 4.00', () => {
+            const numberOfBacterial = 1;
+            const numberOfTime = "40";
+            const result = getNumberOfBacterial(numberOfBacterial, numberOfTime);
+            expect(result).toMatch(`細菌有 4.00`);
         })
-        it('若輸入 80，則顯示細菌有 16.00b 隻', () => {
-            const originNumber = 1;
-            const case5 = "80";
-            const result = getNumberOfBacterial(originNumber, case5);
-            expect(result).toMatch(`細菌有 16.00b 隻`);
+        it('若輸入 80，則顯示細菌有 16.00', () => {
+            const numberOfBacterial = 1;
+            const numberOfTime = "80";
+            const result = getNumberOfBacterial(numberOfBacterial, numberOfTime);
+            expect(result).toMatch(`細菌有 16.00`);
         })
     });
 });
