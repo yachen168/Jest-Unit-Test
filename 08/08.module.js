@@ -10,7 +10,7 @@ function getResultOfDivided(inputNumber) {
     if (!Number.isInteger(inputNumber / 3)) {
         return DivideAgain(inputNumber, timesOfDivide);
     }
-    return `需除以 ${timesOfDivide} 次，此時為 ${inputNumber / 3}.00`;
+    return `需除以 ${timesOfDivide} 次，此時為 ${(inputNumber / 3).toFixed(2)}`;
 }
 
 // 遞迴
