@@ -41,35 +41,41 @@ describe('JS11', () => {
         })
     })
     describe('輸入格式正確得分鐘數，顯示結果', () => {
-        it('若輸入 0，則顯示細菌有 1.00', () => {
-            const numberOfBacterial = 1;
-            const numberOfTime = 0;
-            const result = getNumberOfBacterial(numberOfBacterial, numberOfTime);
-            expect(result).toMatch(`細菌有 1.00`);
-        })
-        it('若輸入 1，則顯示細菌有 1.04', () => {
-            const numberOfBacterial = 1;
-            const numberOfTime = "1";
-            const result = getNumberOfBacterial(numberOfBacterial, numberOfTime);
-            expect(result).toMatch(`細菌有 1.04`);
-        })
-        it('若輸入 20，則顯示細菌有 2.00', () => {
-            const numberOfBacterial = 1;
+        it('若初始細菌 0 隻，無論經過幾分鐘細菌皆為 0.00 隻', () => {
+            const numberOfBacterial = "0";
             const numberOfTime = "20";
             const result = getNumberOfBacterial(numberOfBacterial, numberOfTime);
-            expect(result).toMatch(`細菌有 2.00`);
+            expect(result).toMatch(`細菌有 0.00`);
         })
-        it('若輸入 40，則顯示細菌有 4.00', () => {
-            const numberOfBacterial = 1;
+        it('若初始細菌 1 隻，經過 1 分鐘後，細菌有 1.04 隻', () => {
+            const numberOfBacterial = "1";
+            const numberOfTime = "1";
+            const result = getNumberOfBacterial(numberOfBacterial, numberOfTime);
+            expect(result).toMatch('細菌有 1.04 隻');
+        })
+        it('若初始細菌 1 隻，經過 20 分鐘後，細菌有 2.00 隻', () => {
+            const numberOfBacterial = "1";
+            const numberOfTime = "20";
+            const result = getNumberOfBacterial(numberOfBacterial, numberOfTime);
+            expect(result).toMatch('細菌有 2.00 隻');
+        })
+        it('若初始細菌 1 隻，經過 40 分鐘後，細菌有 4.00 隻', () => {
+            const numberOfBacterial = "1";
             const numberOfTime = "40";
             const result = getNumberOfBacterial(numberOfBacterial, numberOfTime);
-            expect(result).toMatch(`細菌有 4.00`);
+            expect(result).toMatch('細菌有 4.00 隻');
         })
-        it('若輸入 80，則顯示細菌有 16.00', () => {
-            const numberOfBacterial = 1;
+        it('若初始細菌 4 隻，經過 20 分鐘後，細菌有 8.00', () => {
+            const numberOfBacterial = "4";
+            const numberOfTime = "20";
+            const result = getNumberOfBacterial(numberOfBacterial, numberOfTime);
+            expect(result).toMatch('細菌有 8.00 隻');
+        })
+        it('若初始細菌 4 隻，經過 80 分鐘後，細菌有 64.00 隻', () => {
+            const numberOfBacterial = "4";
             const numberOfTime = "80";
             const result = getNumberOfBacterial(numberOfBacterial, numberOfTime);
-            expect(result).toMatch(`細菌有 16.00`);
+            expect(result).toMatch('細菌有 64.00 隻');
         })
     });
 });
