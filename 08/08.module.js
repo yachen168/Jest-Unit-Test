@@ -4,16 +4,16 @@ function isPositiveInteger(inputNumber) {
     return positiveInteger.test(inputNumber);
 }
 
-// 若不能整除則遞迴
+// 若不能整除則繼續除
 function getResultOfDivided(inputNumber) {
     const timesOfDivide = 1;
-    if (!Number.isInteger(inputNumber / 3)) {
+    if (inputNumber % 3 !== 0) {
         return DivideAgain(inputNumber, timesOfDivide);
     }
     return `需除以 ${timesOfDivide} 次，此時為 ${(inputNumber / 3).toFixed(2)}`;
 }
 
-// 遞迴
+// 繼續除到符合為止(遞迴)
 function DivideAgain(inputNumber, timesOfDivide) {
     const resultOfDivide = (inputNumber / 3).toString();
     const isValidFormat = /\.[0-9][0]/;
