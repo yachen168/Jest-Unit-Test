@@ -40,7 +40,7 @@ describe('JS11', () => {
             expect(result).toBeTruthy();
         })
     })
-    describe('輸入格式正確得分鐘數，顯示結果', () => {
+    describe('輸入格式正確，計算結果', () => {
         it('若初始細菌 0 隻，無論經過幾分鐘細菌皆為 0.00 隻', () => {
             const numberOfBacterial = "0";
             const numberOfTime = "20";
