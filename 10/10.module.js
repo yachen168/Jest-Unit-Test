@@ -8,22 +8,15 @@ function getResult() {
     })
     return arrayToString(indexOfPrimeNumber);
 }
-
 // 判斷一個數是否為質數
 function isPrimeNumber(value) {
     for (let i = 2; i < +value; i++) {
         return !!(+value % i);
     }
 }
-
-// 整裡陣列(過濾 undefined)
-function removeUndefined(indexOfPrimeNumber) {
-    return indexOfPrimeNumber.filter(value => value);
-}
-
-// 陣列轉字串
+// 回吐字串(過濾 undefined)
 function arrayToString(indexOfPrimeNumber) {
-    return removeUndefined(indexOfPrimeNumber).join(' , ');
+    return indexOfPrimeNumber.filter(value => value).join(' , ');
 }
 
 module.exports = { getResult, isPrimeNumber };

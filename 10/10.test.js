@@ -1,6 +1,6 @@
 const { getResult, isPrimeNumber } = require('./10.module')
     // 測試採 3A 原則。
-describe('JS11', () => {
+describe('JS10', () => {
     describe('依序判斷每個值是否為質數', () => {
         it('判斷 3 是否為質數，結果為是', () => {
             const num = "3";
