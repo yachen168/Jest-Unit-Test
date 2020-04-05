@@ -13,12 +13,12 @@ function toCaesarCipher(inputLetters) {
     let resultOfCaesarCipher = '';
     const transform = 3;
     for (let letter of inputLetters) {
-        const letterOfCaesarCipher = letter.charCodeAt();
-        let ASCIICode = String.fromCharCode(letterOfCaesarCipher + transform);
+        const ASCIICode = letter.charCodeAt();
+        let letterOfCaesarCipher = String.fromCharCode(ASCIICode + transform);
         if (isXYZxyz(letter)) {
-            ASCIICode = String.fromCharCode(letterOfCaesarCipher + transform - 26);
+            letterOfCaesarCipher = String.fromCharCode(ASCIICode + transform - 26);
         }
-        resultOfCaesarCipher += ASCIICode;
+        resultOfCaesarCipher += letterOfCaesarCipher;
     }
     return resultOfCaesarCipher;
 }
