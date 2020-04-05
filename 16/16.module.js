@@ -1,30 +1,26 @@
 // 是否皆為英文字
-function isAlphabet(inputAlphabets) {
-    const alphabet = /^[A-z]{5}$/;
-    return alphabet.test(inputAlphabets);
+function isLetters(inputLetters) {
+    const letter = /^[A-z]{5}$/;
+    return letter.test(inputLetters);
 }
-
 // 是否有 XYZxyz
-function isXYZ(inputAlphabets) {
-    const xyz = /[xyz]/i;
-    return xyz.test(inputAlphabets);
+function isXYZxyz(letter) {
+    const XYZxyz = /[xyz]/i;
+    return XYZxyz.test(letter);
 }
-
 // 加密
-function toCaesar(inputAlphabets) {
-    let resultOfCaesar = '';
+function toCaesarCipher(inputLetters) {
+    let resultOfCaesarCipher = '';
     const transform = 3;
-    for (let index in inputAlphabets) {
-        const codeList = inputAlphabets[index].charCodeAt();
-        let caesarCode = String.fromCharCode(codeList + transform);
-        if (isXYZ(inputAlphabets[index])) {
-            caesarCode = String.fromCharCode(codeList + transform - 26);
+    for (let letter of inputLetters) {
+        const letterOfCaesarCipher = letter.charCodeAt();
+        let ASCIICode = String.fromCharCode(letterOfCaesarCipher + transform);
+        if (isXYZxyz(letter)) {
+            ASCIICode = String.fromCharCode(letterOfCaesarCipher + transform - 26);
         }
-        resultOfCaesar += caesarCode;
+        resultOfCaesarCipher += ASCIICode;
     }
-    return resultOfCaesar;
+    return resultOfCaesarCipher;
 }
 
-
-
-module.exports = { isAlphabet, toCaesar };
+module.exports = { isLetters, toCaesarCipher };
