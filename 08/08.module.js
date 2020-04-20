@@ -7,7 +7,7 @@ function isPositiveInteger(inputNumber) {
 // 若不能整除則繼續除
 function getResultOfDivided(inputNumber) {
     const timesOfDivide = 1;
-    if (inputNumber % 3 !== 0) {
+    if (!!(inputNumber % 3)) {
         return DivideAgain(inputNumber, timesOfDivide);
     }
     return `需除以 ${timesOfDivide} 次，此時為 ${(inputNumber / 3).toFixed(2)}`;
