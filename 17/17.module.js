@@ -1,9 +1,5 @@
 function getResult() {
-    const result1 = calculate('candidate1');
-    const result2 = calculate('candidate2');
-    const result3 = calculate('candidate3');
-    const result4 = calculate('candidate4');
-    return `一號選手：${result1}，二號選手：${result2}，三號選手：${result3}，四號選手：${result4}`;
+    return `一號選手：${calculate('candidate1')}，二號選手：${calculate('candidate2')}，三號選手：${calculate('candidate3')}，四號選手：${calculate('candidate4')}`;
 }
 
 function calculate(candidate) {
