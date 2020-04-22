@@ -1,7 +1,3 @@
-function getResult() {
-    return `一號選手：${calculate('candidate1')}，二號選手：${calculate('candidate2')}，三號選手：${calculate('candidate3')}，四號選手：${calculate('candidate4')}`;
-}
-
 function calculate(candidate) {
     const votes = [51, 5, 23, 21];
     const table = [
@@ -14,4 +10,4 @@ function calculate(candidate) {
         .reduce((accumulator, currentValue) => accumulator + currentValue);
 }
 
-module.exports = getResult;
+module.exports = calculate;
