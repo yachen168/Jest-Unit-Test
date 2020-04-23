@@ -5,8 +5,5 @@
 const rl = require('../readline.module');
 const getResult = require('./15.module');
 
-let sportQuantity = [0, 0, 0];
-let totalWeight = 0;
-
-console.log(getResult(sportQuantity, totalWeight));
+console.log(getResult());
 rl.close();
