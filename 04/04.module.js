@@ -6,14 +6,17 @@ function isPositiveInteger(inputNumber) {
 // return 結果
 function getResult(inputNumber) {
     let equation = "1";
+    let total = 1;
     for (let i = 2; i <= +inputNumber; i++) {
-        if (i % 2) {
-            equation += `-${i}`;
+        if (!!(i % 2)) {
+            equation += ` - ${i}`;
+            total -= i;
         } else {
-            equation += `+${i}`;
+            equation += ` + ${i}`;
+            total += i;
         }
     }
-    return `總合：${equation} = ${eval(equation)}`;
+    return { equation, total };
 }
 
 module.exports = { isPositiveInteger, getResult };

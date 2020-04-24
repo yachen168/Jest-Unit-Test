@@ -41,19 +41,19 @@ describe('JS04', () => {
     });
     describe('顯示 1+2-3....n 與總和', () => {
         it('若 n = 8，顯示 1+2-3+4-5+6-7+8 = 6', () => {
-            const n = "8";
-            const result = getResult(n);
-            expect(result).toMatch(`1+2-3+4-5+6-7+8 = 6`);
+            const inputNumber = "8";
+            const result = getResult(inputNumber);
+            expect(result).toEqual({ equation: '1 + 2 - 3 + 4 - 5 + 6 - 7 + 8', total: 6 });
         })
         it('若 n = 5，顯示 1+2-3+4-5 = -1', () => {
-            const n = "5";
-            const result = getResult(n);
-            expect(result).toMatch(`1+2-3+4-5 = -1`);
+            const inputNumber = "5";
+            const result = getResult(inputNumber);
+            expect(result).toEqual({ equation: '1 + 2 - 3 + 4 - 5', total: -1 });
         })
         it('若 n = 1，顯示 1 = 1', () => {
-            const n = "1";
-            const result = getResult(n);
-            expect(result).toMatch(`1 = 1`);
+            const inputNumber = "1";
+            const result = getResult(inputNumber);
+            expect(result).toEqual({ equation: '1', total: 1 });
         })
     })
 });
