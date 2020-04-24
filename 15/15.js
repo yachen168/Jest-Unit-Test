@@ -5,5 +5,5 @@
 const rl = require('../readline.module');
 const getResult = require('./15.module');
 
-console.log(getResult());
+console.log(`啞鈴數量：${getResult().quantityOfEquipments[0]}，單槓數量：${getResult().quantityOfEquipments[1]}，跑步機數量：${getResult().quantityOfEquipments[2]}，總重量：${getResult().totalWeight}`);
 rl.close();
