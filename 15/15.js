@@ -3,7 +3,15 @@
 決定每次要搬到車上的器材為何，當超過限重時即停止搬運，並列印出三種器材的個數及總重量。
 */
 const rl = require('../readline.module');
-const getResult = require('./15.module');
+const carryEquipments = require('./15.module');
 
-console.log(`啞鈴數量：${getResult().quantityOfEquipments[0]}，單槓數量：${getResult().quantityOfEquipments[1]}，跑步機數量：${getResult().quantityOfEquipments[2]}，總重量：${getResult().totalWeight}`);
+function getResult() {
+    let quantityOfEquipments = [0, 0, 0];
+    const weightOfEquipments = [30, 20, 50];
+    let totalWeight = 0;
+    const result = carryEquipments(quantityOfEquipments, weightOfEquipments, totalWeight);
+    console.log(`啞鈴數量：${result.quantityOfEquipments[0]}，單槓數量：${result.quantityOfEquipments[1]}，跑步機數量：${result.quantityOfEquipments[2]}，總重量：${result.totalWeight}`);
+}
+
+getResult();
 rl.close();
