@@ -5,21 +5,25 @@
 const rl = require('../readline.module');
 const { isPositiveInteger, getNumberOfBacterial } = require('./14.module');
 
-function js14() {
-    rl.question("請輸入一開始的細菌數量：", numberOfBacterial => {
-        rl.question("請輸入分鐘數(需 ≧ 0)：", time => {
-            if (!isPositiveInteger(numberOfBacterial)) {
-                console.log(`格式錯誤，請重新輸入一個大於 0 的整數`);
-                return js14();
-            }
-            if (!isPositiveInteger(time)) {
-                console.log(`格式錯誤，請重新輸入一個大於 0 的整數`);
-                return js14();
-            }
-            console.log(getNumberOfBacterial(numberOfBacterial, time));
-            rl.close();
-        });
+function question1() {
+    rl.question("請輸入一開始的細菌數量(需為大於 0 的整數)：", numberOfBacterial => {
+        if (!isPositiveInteger(numberOfBacterial)) {
+            console.log(`請重新輸入一開始的細菌數量(大於 0 的整數)`);
+            return question1();
+        }
+        question2(numberOfBacterial);
     });
 }
 
-js14();
+function question2(numberOfBacterial) {
+    rl.question("請輸入分鐘數(需為大於 0 的整數)：", time => {
+        if (!isPositiveInteger(time)) {
+            console.log(`請重新輸入分鐘數(大於 0 的整數)`);
+            return question2(numberOfBacterial);
+        }
+        console.log(getNumberOfBacterial(numberOfBacterial, time));
+        rl.close();
+    });
+}
+
+question1();
