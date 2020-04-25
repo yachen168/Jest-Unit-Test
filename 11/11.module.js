@@ -3,7 +3,6 @@ function isPositiveInteger(inputNumber) {
     const positiveInteger = /^[1-9]+$/;
     return positiveInteger.test(inputNumber);
 }
-
 // 取得價錢
 function getPrice(inputNumber) {
     const eachPeriodPrice = 500;
@@ -15,7 +14,7 @@ function getPrice(inputNumber) {
             totalPrice -= 200;
         } while (inputNumber > 5);
     }
-    return `價錢為 $${totalPrice} 元`;
+    return totalPrice;
 }
 
 module.exports = { isPositiveInteger, getPrice };

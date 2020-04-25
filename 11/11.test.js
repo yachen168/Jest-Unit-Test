@@ -43,17 +43,17 @@ describe('JS11', () => {
         it('若輸入 1，則顯示價錢：$395', () => {
             const case1 = "1";
             const result = getPrice(case1);
-            expect(result).toMatch(`價錢為 $395 元`);
+            expect(result).toBe(395);
         })
         it('若輸入 5，則顯示價錢：$2195', () => {
             const case2 = "5";
             const result = getPrice(case2);
-            expect(result).toMatch(`價錢為 $2195 元`);
+            expect(result).toBe(2195);
         })
         it('若輸入 12，則顯示價錢：$2195', () => {
             const case2 = "12";
             const result = getPrice(case2);
-            expect(result).toMatch(`價錢為 $5495 元`);
+            expect(result).toBe(5495);
         })
     });
 });
