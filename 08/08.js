@@ -5,12 +5,11 @@ const { isPositiveInteger, getResultOfDivided } = require('./08.module');
 
 function js08() {
     rl.question("請輸入一個正整數：", inputNumber => {
-        let timesOfDivide = 1;
         if (!isPositiveInteger(inputNumber)) {
             console.log(`請重新輸入一個正整數`);
             return js08();
         }
-        const result = getResultOfDivided(inputNumber, timesOfDivide);
+        const result = getResultOfDivided(inputNumber, timesOfDivide = 1);
         console.log(`須除以 ${result.timesOfDivide} 次，此時為 ${result.resultAfterDivided}`);
         rl.close();
     });
