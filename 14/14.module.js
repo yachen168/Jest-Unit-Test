@@ -11,7 +11,7 @@ function getNumberOfBacterial(numberOfBacterial, time) {
         numberOfBacterial = numberOfBacterial * oneMinuteIncrement
         return getNumberOfBacterial(numberOfBacterial, --time);
     }
-    return `細菌有 ${numberOfBacterial.toFixed(2)} 隻`;
+    return +numberOfBacterial.toFixed(2);
 }
 
 module.exports = { isPositiveInteger, getNumberOfBacterial };

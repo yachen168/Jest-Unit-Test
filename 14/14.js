@@ -21,7 +21,7 @@ function question2(numberOfBacterial) {
             console.log(`請重新輸入分鐘數(大於 0 的整數)`);
             return question2(numberOfBacterial);
         }
-        console.log(getNumberOfBacterial(numberOfBacterial, time));
+        console.log(`細菌有 ${getNumberOfBacterial(numberOfBacterial, time)} 隻`);
         rl.close();
     });
 }
