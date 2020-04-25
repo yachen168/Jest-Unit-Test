@@ -1,9 +1,8 @@
 // 是否為大於 0 的整數
-function isPositiveInteger(numberOfBacterial, time) {
+function isPositiveInteger(inputNumber) {
     const positiveInteger = /^[1-9]\d*$/;
-    return (positiveInteger.test(numberOfBacterial) && positiveInteger.test(time));
+    return positiveInteger.test(inputNumber);
 }
-
 // 計算總細菌
 function getNumberOfBacterial(numberOfBacterial, time) {
     // (1+x)^20 = 2 => (1+x) = 2 開 20 次方根

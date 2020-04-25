@@ -8,8 +8,12 @@ const { isPositiveInteger, getNumberOfBacterial } = require('./14.module');
 function js14() {
     rl.question("請輸入一開始的細菌數量：", numberOfBacterial => {
         rl.question("請輸入分鐘數(需 ≧ 0)：", time => {
-            if (!isPositiveInteger(numberOfBacterial, time)) {
-                console.log(`格式有誤！`);
+            if (!isPositiveInteger(numberOfBacterial)) {
+                console.log(`格式錯誤，請重新輸入一個大於 0 的整數`);
+                return js14();
+            }
+            if (!isPositiveInteger(time)) {
+                console.log(`格式錯誤，請重新輸入一個大於 0 的整數`);
                 return js14();
             }
             console.log(getNumberOfBacterial(numberOfBacterial, time));
