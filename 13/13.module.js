@@ -5,7 +5,7 @@ function getRestTime() {
     const costTime_Turtle = distance / speedPerSecond_Turtle;
     const costTime_Rabbit = distance / speedPerSecond_Rabbit;
     const restTime = Math.floor(costTime_Turtle - costTime_Rabbit);
-    return `兔子還可休息 ${restTime} 秒(取整數)`;
+    return restTime;
 }
 
 module.exports = getRestTime;
