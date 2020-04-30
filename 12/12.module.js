@@ -1,11 +1,12 @@
 // 印出一陣列 10~20
-function printArray_tenToTwenty() {
-    return Array(11).fill().map((value, index) => index + 10);
+function arrayNumsOfRange(minNum, maxNum) {
+    const range = maxNum - minNum + 1;
+    return Array(range).fill().map((value, index) => index + 10);
 }
 
 // 找出陣列裡的質數
-function findPrimeNumber() {
-    return printArray_tenToTwenty().filter(value => isPrimeNumber(value));
+function findPrimeNumber(arrNums) {
+    return arrNums.filter(value => isPrimeNumber(value));
 }
 
 // 判斷一個數是否為質數
@@ -20,9 +21,9 @@ function isPrimeNumber(value) {
 }
 
 // 找出 100 以內倍數
-function getMultiple() {
+function getMultiple(arrPrimes) {
     let multiple = [];
-    findPrimeNumber().forEach(value => {
+    arrPrimes.forEach(value => {
         for (let i = 1; i < 100; i++) {
             if (!(i % value)) {
                 multiple.push(i);
@@ -32,4 +33,4 @@ function getMultiple() {
     return multiple;
 }
 
-module.exports = { findPrimeNumber, getMultiple };
+module.exports = { findPrimeNumber, getMultiple, arrayNumsOfRange };
