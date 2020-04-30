@@ -1,6 +1,5 @@
 function getResultOfMerge(arr1, arr2) {
-    const resultOfMerge = arr1.map((value, index) => value + arr2[index]);
-    return resultOfMerge;
+    return arr1.map((value, index) => value + arr2[index]);
 }
 
 module.exports = getResultOfMerge;
