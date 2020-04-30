@@ -5,13 +5,7 @@
 const rl = require('../readline.module');
 const carryEquipments = require('./15.module');
 
-function getResult() {
-    let quantityOfEquipments = [0, 0, 0];
-    const weightOfEquipments = [30, 20, 50];
-    let totalWeight = 0;
-    const result = carryEquipments(quantityOfEquipments, weightOfEquipments, totalWeight);
-    console.log(`啞鈴數量：${result.quantityOfEquipments[0]}，單槓數量：${result.quantityOfEquipments[1]}，跑步機數量：${result.quantityOfEquipments[2]}，總重量：${result.totalWeight}`);
-}
+const result = carryEquipments([0, 0, 0], [30, 20, 50], 0);
+console.log(`啞鈴數量：${result.quantityOfEquipments[0]}，單槓數量：${result.quantityOfEquipments[1]}，跑步機數量：${result.quantityOfEquipments[2]}，總重量：${result.totalWeight}`);
 
-getResult();
 rl.close();
