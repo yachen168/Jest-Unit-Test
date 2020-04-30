@@ -4,5 +4,8 @@
 const rl = require('../readline.module');
 const getResultOfMerge = require('./09.module');
 
-console.log(getResultOfMerge());
+const arr1 = [2, 3, 1, 7, 9];
+const arr2 = [8, 7, 9, 3, 1];
+console.log(getResultOfMerge(arr1, arr2));
+
 rl.close();
