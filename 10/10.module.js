@@ -1,12 +1,8 @@
 // 過濾出結果
-function getResult() {
-    const array = [3, 50, 0, 13, 2, 4, 11];
-    const indexOfPrimeNumber = array.map((value, index) => {
-        if (isPrimeNumber(value)) {
-            return `質數：${value} (索引值為 ${index})`;
-        }
-    })
-    return arrayToString(indexOfPrimeNumber);
+function getResult(array) {
+    return array
+        .map((value, index) => ({ index, value }))
+        .filter(({ value }) => isPrimeNumber(value))
 }
 // 判斷一個數是否為質數
 function isPrimeNumber(value) {
@@ -14,9 +10,5 @@ function isPrimeNumber(value) {
         return !!(+value % i);
     }
 }
-// 回吐字串(過濾 undefined)
-function arrayToString(indexOfPrimeNumber) {
-    return indexOfPrimeNumber.filter(value => value).join(' , ');
-}
 
-module.exports = { getResult, isPrimeNumber };
+module.exports = { getResult };
