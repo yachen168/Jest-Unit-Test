@@ -4,5 +4,5 @@
 const rl = require('../readline.module');
 const getRestTime = require('./13.module')
 
-console.log(`兔子還可休息 ${getRestTime()} 秒`);
+console.log(`兔子還可休息 ${getRestTime(0.28,20 - 1 / 5,1000)} 秒`);
 rl.close();
