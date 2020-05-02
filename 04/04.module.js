@@ -5,17 +5,12 @@ function isPositiveInteger(inputNumber) {
 }
 // return 結果
 function getResult(inputNumber) {
-    let equation = "1";
+    let equation = '1';
     let total = 1;
     for (let i = 2; i <= +inputNumber; i++) {
-        if (!!(i % 2)) {
-            equation += ` - ${i}`;
-            total -= i;
-        } else {
-            equation += ` + ${i}`;
-            total += i;
-        }
+        equation = (i % 2) ? (equation + ` - ${i}`) : (equation + ` + ${i}`);
     }
+    total = eval(equation);
     return { equation, total };
 }
 
