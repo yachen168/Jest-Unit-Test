@@ -8,7 +8,7 @@ function getResult(inputNumber) {
     let equation = '1';
     let total = 1;
     for (let i = 2; i <= +inputNumber; i++) {
-        equation = (i % 2) ? (equation + ` - ${i}`) : (equation + ` + ${i}`);
+        equation += (i % 2) ? ` - ${i}` : ` + ${i}`;
     }
     total = eval(equation);
     return { equation, total };
