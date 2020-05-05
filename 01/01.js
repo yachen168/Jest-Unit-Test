@@ -9,7 +9,7 @@ function js01() {
             console.log(`請重新輸入有效數字`);
             return js01();
         }
-        console.log(isPlayMovie(inputNumber));
+        console.log(`${isPlayMovie(inputNumber) ? '照常播放電影' : '不播放電影'}`);
         rl.close();
     });
 }

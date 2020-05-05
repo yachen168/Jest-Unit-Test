@@ -38,12 +38,12 @@ describe('JS01', () => {
         it('若輸入人數 10 人，顯示播放電影，', () => {
             const numberOfCustomer = "10";
             const result = isPlayMovie(numberOfCustomer);
-            expect(result).toMatch('照常播放電影');
+            expect(result).toBeTruthy();
         })
         it('若輸入人數 0 人，顯示不播放電影', () => {
             const numberOfCustomer = "0";
             const result = isPlayMovie(numberOfCustomer);
-            expect(result).toMatch(`不播放電影`);
+            expect(result).toBeFalsy();
         })
     });
 });

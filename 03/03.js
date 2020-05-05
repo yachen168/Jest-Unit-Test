@@ -9,7 +9,7 @@ function js03() {
             console.log(`請輸入有效年齡`);
             return js03();
         }
-        console.log(isHalfPrice(inputAge));
+        console.log(`${isHalfPrice(inputAge) ? '200 元' : '400 元'}`);
         rl.close();
     });
 }

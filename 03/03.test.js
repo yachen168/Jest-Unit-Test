@@ -38,12 +38,12 @@ describe('JS03', () => {
         it('輸入 60 歲，顯示票價 400 元', () => {
             const ageOfCostumer = "60";
             const result = isHalfPrice(ageOfCostumer);
-            expect(result).toMatch(`400 元`);
+            expect(result).toBeFalsy();
         })
         it('輸入 3 歲，顯示票價 200 元', () => {
             const ageOfCostumer = "3";
             const result = isHalfPrice(ageOfCostumer);
-            expect(result).toMatch(`200 元`);
+            expect(result).toBeTruthy();
         })
     })
 });

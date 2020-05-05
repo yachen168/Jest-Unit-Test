@@ -9,7 +9,7 @@ function js02() {
                 console.log(`請重新輸入2個有效整數`);
                 return js02();
             }
-            console.log(isRemainderEqual(inputNumber1, inputNumber2));
+            console.log(`${isRemainderEqual(inputNumber1, inputNumber2) ? '餘數相同' : '餘數不同'}`);
             rl.close();
         });
     });

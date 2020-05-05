@@ -39,13 +39,13 @@ describe('JS02', () => {
             const number1 = "6";
             const number2 = "9";
             const result = isRemainderEqual(number1, number2);
-            expect(result).toMatch(`餘數相同`);
+            expect(result).toBeTruthy();
         })
         it('餘數不同：例如第一個數為 8，第二個數為 4，除以 3 的餘數分別為 2 與 1', () => {
             const number1 = "8";
             const number2 = "4";
             const result = isRemainderEqual(number1, number2);
-            expect(result).toMatch(`餘數不同`);
+            expect(result).toBeFalsy();
         })
     })
 });

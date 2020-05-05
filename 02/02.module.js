@@ -6,7 +6,7 @@ function isIntegers(inputNumber1, inputNumber2) {
 
 // 餘數是否相同
 function isRemainderEqual(inputNumber1, inputNumber2) {
-    return (+inputNumber1 % 3 === +inputNumber2 % 3) ? '餘數相同' : '餘數不同';
+    return (+inputNumber1 % 3 === +inputNumber2 % 3);
 }
 
 module.exports = { isIntegers, isRemainderEqual };
