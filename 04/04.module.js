@@ -6,7 +6,7 @@ function isPositiveInteger(inputNumber) {
 // return 結果
 function getResult(inputNumber) {
     let equation = '1';
-    let total = 1;
+    let total;
     for (let i = 2; i <= +inputNumber; i++) {
         equation += (i % 2) ? ` - ${i}` : ` + ${i}`;
     }
